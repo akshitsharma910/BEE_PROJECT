@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div id="center">
+        <div id="blur-box"></div>
+       <div id="info-box">
+        <form>
+            <p id="info">Info Form</p>
+            <input type="text" placeholder="firstname" id="firstname" name="fname">
+            <input type="text" placeholder="lastname" id="lastname" name="lname">
+            <input type="number" placeholder="age" id="age" name="age">
+            <br>    
+            <label style="margin-right: 120px;">Gender: </label><input type="radio" value="male" name="gender" ><label style="margin-right: 30px;"> Male</label><input type="radio" value="female" name="gender"><label> Female</label>
+            <br>
+            <label style="font-size: 16px;margin-right: 120px;">Birthdate: </label><input type="date" style="width: 135px;" name="date">
+            <br>
+            <label style="margin-left: 48px;font-size: 16px;padding-right: 100px;">Upload Photo: </label><input type="file" style="color: white;font-size: 9px;" name="photo" > 
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+       </div> 
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
