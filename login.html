@@ -14,13 +14,25 @@
             <p id="info">Info Form</p>
             <input type="text" placeholder="firstname" id="firstname" name="fname">
             <input type="text" placeholder="lastname" id="lastname" name="lname">
-            <input type="number" placeholder="age" id="age" name="age">
-            <br>    
-            <label style="margin-right: 120px;">Gender: </label><input type="radio" value="male" name="gender" ><label style="margin-right: 30px;"> Male</label><input type="radio" value="female" name="gender"><label> Female</label>
+            <input type="email" placeholder="email" id="email" name="email">   
+            <input type="text" placeholder="phone number" id="number" name="number">   
             <br>
-            <label style="font-size: 16px;margin-right: 120px;">Birthdate: </label><input type="date" style="width: 135px;" name="date">
+            <label style="padding-right: 20px;margin-left: -165px;" >Gender: </label><input type="radio" value="male" name="gender" ><label style="margin-right: 15px;"> Male</label><input type="radio" value="female" name="gender"><label> Female</label>
             <br>
-            <label style="margin-left: 48px;font-size: 16px;padding-right: 100px;">Upload Photo: </label><input type="file" style="color: white;font-size: 9px;" name="photo" > 
+            <br>
+            <label style="padding-right: 20px;margin-left: -155px;" >Birthday: </label><input type="date" style="width: 135px;margin-right:15px;" name="date">
+            <br>
+            <br>
+            <label style="padding-right: 20px;margin-left: -90px;">Upload Photo: </label><input type="file" style="color: white;" name="photo" > 
+            <br>
+            <br>
+            <label style="padding-right: 20px;margin-left: -125px;">Degree: </label>
+            <select name="degree">
+                <option selected="selected">Choose Degree</option>
+                <option>Bachelors of Engineering</option>
+                <option>MBBS</option>
+                <option>Masters of Technology</option>
+            </select>
             <button type="submit" id="submit-btn">Submit</button>
         </form>
        </div> 

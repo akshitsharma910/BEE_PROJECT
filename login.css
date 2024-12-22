@@ -23,7 +23,7 @@ html,body{
 
 #blur-box{
     border-radius:10px;
-    width: 28%;
+    width: 40%;
     height: 75%;
     filter: blur(5px);
     border: 2px solid white;
@@ -32,10 +32,10 @@ html,body{
 }
 #info-box{
     border-radius:10px;
-    width: 28%;
+    width: 40%;
     height: 75%;
-    background-color: transparent;
-    border: 1px solid white;
+    background-color: rgba(139, 95, 180, 0.449);
+    border: 2px solid white;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -52,34 +52,26 @@ html,body{
     font-weight: bold;
 }
 
-#firstname,#lastname{
-    width: 80%;
+#firstname,#lastname,#email,#number{
+    width: 40%;
     height: 7%;
     padding: 7px;
     border-radius: 5px;
     border: 1px solid white;
     background-color: transparent;
     text-indent: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     color: white;
+    
 }
 
-#age{
-    color: white;
-    width: 80%;
-    height: 7%;
-    padding: 7px;
-    border-radius: 5px;
-    border: 1px solid white;
-    background-color: transparent;
-    text-indent: 5px;
-    margin-bottom: 30px;
-}
+
+
+
 
 label{
     color: white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    
 }
 
 #submit-btn{
@@ -93,6 +85,10 @@ label{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     font-weight: 600;
+}
+
+#submit-btn:hover{
+    background-color: lightgrey;
 }
 
 
