@@ -1,0 +1,24 @@
+[
+  {
+    "fname": "raghav",
+    "email": "r@gmail.com",
+    "number": "123123",
+    "password": "ra",
+    "gender": "male",
+    "date": "",
+    "photo": "",
+    "degree": "MBBS",
+    "year": "1st"
+  },
+  {
+    "fname": "anish",
+    "email": "an@gmail.com",
+    "number": "12312412",
+    "password": "an",
+    "gender": "female",
+    "date": "",
+    "photo": "",
+    "degree": "Bachelors of Engineering",
+    "year": "2nd"
+  }
+]
