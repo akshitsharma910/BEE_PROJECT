@@ -12,11 +12,13 @@
         <div id="info-box">
             <form id="infoForm" action="/submit-form" method="POST">
                 <p id="info">Registration Form</p>
+                <hr id="line">
                 <input type="text" placeholder="firstname" id="firstname" name="fname">
                 <input type="email" placeholder="email" id="email" name="email">   
                 <input type="text" placeholder="phone number" id="number" name="number">   
                 <input type="password" placeholder="password" name="password" id="password">
                 <br>
+                <div id="context">
                 <label style="padding-right: 20px;margin-left: -165px;">Gender: </label>
                 <input type="radio" value="male" name="gender"><label style="margin-right: 15px;"> Male</label>
                 <input type="radio" value="female" name="gender"><label> Female</label>
@@ -27,7 +29,7 @@
                 <br>
                 <br>
                 <label style="padding-right: 20px;margin-left: -90px;">Upload Photo: </label>
-                <input type="file" style="color: white;" name="photo"> 
+                <input type="file"  name="photo"> 
                 <br>
                 <br>
                 <label style="padding-right: 20px;margin-left: -125px;">Degree: </label>
@@ -48,7 +50,9 @@
                     <option>4th</option>
                 </select>
                 <br>
+                <hr id="line1">
                 <button type="submit" id="submit-btn">Submit</button>
+                </div>
                 <p style="margin-top: 20px; color: white;">Already a user? <a href="/login.html" style="color: lightblue; text-decoration: none;">Login Here</a></p>
             </form>
         </div> 

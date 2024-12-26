@@ -78,89 +78,123 @@ app.get('/profile', (req, res) => {
     const user = req.session.user;
     res.send(`
         <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Profile</title>
-            <style>
-                    body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #2980b9, #6dd5fa);
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #2980b9, #6dd5fa);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(Mountain.jpg);
+    background-size:cover;
+}
 
-        #profile-center {
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            width: 350px;
-        }
+#profile-center {
+    text-align: center;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 350px;
+    border: 1px solid white;
+}
 
-        #profile-box {
-            color: #333;
-        }
+#profile-box {
+    color:white;
+    /* box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); */
+}
+#blur-box{
+    border-radius:10px;
+    width: 345px;
+    height: 330px;
+    filter: blur(5px);
+    border: 2px solid white;
+    position:fixed;
+    backdrop-filter: blur(0.5px);
+    z-index: -1;
+    padding: 22px;
+    margin-left: -20px;
+    margin-top: -20px;
+}
 
-        #profile-heading {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #2c3e50;
-        }
+#profile-heading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
 
-        #profile-info p {
-            margin: 10px 0;
-            font-size: 16px;
-            text-align: left;
-            padding: 0 10px;
-            line-height: 1.6;
-        }
+#profile-info p {
+    margin: 10px 0;
+    font-size: 16px;
+    text-align: left;
+    padding: 0 10px;
+    line-height: 1.6;
+}
 
-        #logout-btn {
-            margin-top: 20px;
-            background: #e74c3c;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
+#logout-btn {
+    margin-top: 20px;
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.8s;
+}
 
-        #logout-btn:hover {
-            background: #c0392b;
-        }
+#logout-btn:hover {
+    background: linear-gradient(90deg, white, silver);
+    color: black;
+}
 
-        #logout-btn:focus {
-            outline: none;
-        }
+#logout-btn:focus {
+    outline: none;
+}
 
-            </style>
-        </head>
-        <body>
-            <div id="profile-center">
-                <div id="profile-box">
-                    <h1 id="profile-heading">Welcome, <span id="user-name">${user.fname}</span></h1>
-                    <div id="profile-info">
-                        <p><strong>Email:</strong> <span id="user-email">${user.email}</span></p>
-                        <p><strong>Phone Number:</strong> <span id="user-phone">${user.number}</span></p>
-                        <p><strong>Gender:</strong> <span id="user-gender">${user.gender}</span></p>
-                        <p><strong>Birthday:</strong> <span id="user-birthday">${user.date}</span></p>
-                        <p><strong>Degree:</strong> <span id="user-degree">${user.degree}</span></p>
-                        <p><strong>Year:</strong> <span id="user-year">${user.year}</span></p>
-                    </div>
-                    <button id="logout-btn" onclick="window.location.href='/logout'">Logout</button>
-                </div>
+#infoline{
+    font-style: italic;
+    margin: 10px 0; 
+    font-size: 18px; 
+    text-align: left; 
+    padding: 0 15px; 
+    line-height: 1.6; 
+    border-left: 7px solid rgb(84, 89, 184); 
+    background-color: white;
+    /* border: 1px solid white; */
+    border-radius: 5px; 
+    padding-left: 10px;
+    color: black;
+}
+
+    </style>
+</head>
+<body>
+    <div id="profile-center">
+        <div id="blur-box"></div>
+        <div id="profile-box">
+            <h1 id="profile-heading">Welcome, <span id="user-name">${user.fname}</span></h1>
+            <div id="profile-info">
+                <p id="infoline"><strong>Email:</strong> <span id="user-email">${user.email}</span></p>
+                <p id="infoline"><strong>Phone Number:</strong> <span id="user-phone">${user.number}</span></p>
+                <p id="infoline"><strong>Gender:</strong> <span id="user-gender">${user.gender}</span></p>
+                <p id="infoline"><strong>Birthday:</strong> <span id="user-birthday">${user.date}</span></p>
+                <p id="infoline"><strong>Degree:</strong> <span id="user-degree">${user.degree}</span></p>
+                <p id="infoline"><strong>Year:</strong> <span id="user-year">${user.year}</span></p>
             </div>
-        </body>
-        </html>
+            <button id="logout-btn" onclick="window.location.href='/logout'">Logout</button>
+        </div>
+    </div>
+</body>
+</html>
     `);
 });
 

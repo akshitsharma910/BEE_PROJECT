@@ -23,8 +23,8 @@ html,body{
 
 #blur-box{
     border-radius:10px;
-    width: 40%;
-    height: 75%;
+    width: 40.1%;
+    height: 81.1%;
     filter: blur(5px);
     border: 2px solid white;
     position:fixed;
@@ -33,8 +33,8 @@ html,body{
 #info-box{
     border-radius:10px;
     width: 40%;
-    height: 75%;
-    background-color: rgba(139, 95, 180, 0.449);
+    height: 81%;
+    background-color: transparent;
     border: 2px solid white;
     display: flex;
     text-align: center;
@@ -48,8 +48,26 @@ html,body{
     color: white;
     font-size: 40px;
     margin-top: 40px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     font-weight: bold;
+}
+
+#line{
+    width: 100%;
+    color: white;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#line1{
+    width: 100%;
+    color: white;
+    height: 3px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 30px;
 }
 
 #firstname,#lastname,#email,#number,#password{
@@ -60,9 +78,34 @@ html,body{
     border: 1px solid white;
     background-color: transparent;
     text-indent: 5px;
+    /* margin-top: 20px; */
     margin-bottom: 25px;
     color: white;
-    
+}
+
+#firstname:hover,#lastname:hover,#email:hover,#number:hover,#password:hover{
+    background-color: silver;
+    /* background: linear-gradient(90deg, silver, white); */
+    color: black;
+    border:1.5px solid white;
+    transition: background 0.8s;
+}
+
+#context{
+    font-style: italic;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select {
+    padding: 3px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    color: #000000;
 }
 
 label{
@@ -72,8 +115,9 @@ label{
 
 #submit-btn{
     border-radius: 10px;
-    height: 7%;
-    width: 80%;
+    padding: 8px;
+    height: 15%;
+    width: 75%;
     background-color: white;
     color: black;
     border: none;
@@ -84,7 +128,27 @@ label{
 }
 
 #submit-btn:hover{
-    background-color: lightgrey;
+    background: linear-gradient(90deg,white,silver);
+    color: black;
+}
+
+#login-btn{
+    border-radius: 10px;
+    padding: 8px;
+    height: 7%;
+    width: 75%;
+    background-color: white;
+    color: black;
+    border: none;
+    margin-top: 40px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#login-btn:hover{
+    background: linear-gradient(90deg,white,silver);
+    color: black;
 }
 
 ::placeholder{
