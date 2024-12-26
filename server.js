@@ -28,6 +28,11 @@ const dataFilePath = path.join(__dirname, 'data', 'users.json');
 app.post('/submit-form', (req, res) => {
     const userData = req.body;
 
+    // Validate password length
+    if (!userData.password || userData.password.length < 8) {
+        return res.status(400).send('Error: Password must be at least 8 characters long.');
+    }
+
     fs.readFile(dataFilePath, (err, data) => {
         if (err) {
             return res.status(500).send('Error reading user data.');
@@ -38,6 +43,12 @@ app.post('/submit-form', (req, res) => {
             users = JSON.parse(data); // Parse existing data
         }
 
+        // Check if the email already exists
+        if (users.some(user => user.email === userData.email)) {
+            return res.status(400).send('Error: Email already exists.');
+        }
+
+        // Add the new user
         users.push(userData);
 
         fs.writeFile(dataFilePath, JSON.stringify(users, null, 2), (err) => {
@@ -48,6 +59,7 @@ app.post('/submit-form', (req, res) => {
         });
     });
 });
+
 
 // Handle login
 app.post('/login', (req, res) => {
